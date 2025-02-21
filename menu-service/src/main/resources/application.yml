@@ -1,0 +1,18 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: menu-service
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/foodX
+    username: postgres
+    password: Singama@98
+    pool:
+      max-size: 10
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

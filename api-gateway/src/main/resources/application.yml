@@ -15,9 +15,13 @@ spring:
           predicates:
             - Path=/users/**
         - id: restaurant-service
-          uri: lb://RESTAURANT-SERVICE
+          uri: http://localhost:8082
           predicates:
             - Path=/restaurants/**
+        - id: menu-service
+          uri: MENU-SERVICE
+          predicates:
+              - Path=/restaurants/{name}/menus/**
 
 
 eureka:
